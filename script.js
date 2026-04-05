@@ -273,7 +273,7 @@ async function salvarPontuacao(nome, pontos) {
 
   try {
     const { error } = await supabaseClient
-      .from('pontuacoes')
+      .from('pontuacoes_adultos')
       .insert([registro]);
 
     if (error) throw error;
@@ -317,7 +317,7 @@ async function sincronizarPendentes() {
 
   try {
     const { error } = await supabaseClient
-      .from('pontuacoes')
+      .from('pontuacoes_adultos')
       .insert(pendentes);
 
     if (error) throw error;
@@ -340,7 +340,7 @@ async function carregarRankingGlobal() {
 
   try {
     const { data, error } = await supabaseClient
-      .from('pontuacoes')
+      .from('pontuacoes_adultos')
       .select('nome, pontos')
       .order('pontos', { ascending: false })
       .limit(20);
@@ -413,7 +413,7 @@ function carregarRankingLocal() {
 async function verificarPosicaoNoRanking(pontos) {
   try {
     const { data, error } = await supabaseClient
-      .from('pontuacoes')
+      .from('pontuacoes_adultos')
       .select('pontos')
       .gte('pontos', pontos);
 
@@ -421,7 +421,7 @@ async function verificarPosicaoNoRanking(pontos) {
       const posicao = data.length;
 
       const { count } = await supabaseClient
-        .from('pontuacoes')
+        .from('pontuacoes_adultos')
         .select('*', { count: 'exact', head: true });
 
       const totalJogadores = count || 0;
