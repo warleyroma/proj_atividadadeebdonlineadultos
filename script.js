@@ -12,137 +12,136 @@ const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_
 // =====================================================================
 const BANCO = {
   quiz: [
-    { pergunta: "Quem chamou Abrão para sair da sua terra?",    opcoes: ["Deus", "Moisés", "Um anjo"], correta: 0 },
-    { pergunta: "O chamado de Abrão exigia:",                   opcoes: ["Fé e obediência", "Força física", "Riquezas"], correta: 0 },
-    { pergunta: "Abrão deveria deixar:",                        opcoes: ["Terra, parentela e casa do pai", "Apenas sua cidade", "Somente seus bens"], correta: 0 },
-    { pergunta: "Para onde Abrão iria?",                        opcoes: ["Uma terra que Deus mostraria", "Egito", "Jerusalém"], correta: 0 },
-    { pergunta: "Deus prometeu fazer de Abrão:",                opcoes: ["Uma grande nação", "Um rei", "Um sacerdote"], correta: 0 },
-    { pergunta: "Abrão partiu com qual idade?",                 opcoes: ["75 anos", "50 anos", "100 anos"], correta: 0 },
-    { pergunta: "Quem acompanhou Abrão na jornada?",            opcoes: ["Ló", "Isaque", "Jacó"], correta: 0 },
-    { pergunta: "A fé de Abrão foi demonstrada por:",           opcoes: ["Obediência", "Dúvida", "Medo"], correta: 0 },
-    { pergunta: "Ao chegar em Canaã, Abrão enfrentou:",         opcoes: ["Fome", "Guerra", "Doença"], correta: 0 },
-    { pergunta: "Para onde Abrão foi durante a fome?",          opcoes: ["Egito", "Babilônia", "Assíria"], correta: 0 },
-    { pergunta: "Deus prometeu que Abrão seria:",               opcoes: ["Uma bênção", "Um juiz", "Um guerreiro"], correta: 0 },
-    { pergunta: "Abrão edificava altares para:",                opcoes: ["Adorar ao Senhor", "Descansar", "Comer"], correta: 0 },
-    { pergunta: "O nome Abraão significa:",                     opcoes: ["Pai de muitas nações", "Servo fiel", "Homem justo"], correta: 0 }
+    { pergunta: "Quem chamou Abrão para sair da sua terra?", opcoes: ["Deus", "Moisés", "Um anjo"], correta: 0 },
+    { pergunta: "O chamado de Abrão exigia:", opcoes: ["Fé e obediência", "Força física", "Riquezas"], correta: 0 },
+    { pergunta: "Abrão deveria deixar:", opcoes: ["Terra, parentela e casa do pai", "Apenas sua cidade", "Somente seus bens"], correta: 0 },
+    { pergunta: "Para onde Abrão iria?", opcoes: ["Uma terra que Deus mostraria", "Egito", "Jerusalém"], correta: 0 },
+    { pergunta: "Deus prometeu fazer de Abrão:", opcoes: ["Uma grande nação", "Um rei", "Um sacerdote"], correta: 0 },
+    { pergunta: "Abrão partiu com qual idade?", opcoes: ["75 anos", "50 anos", "100 anos"], correta: 0 },
+    { pergunta: "Quem acompanhou Abrão na jornada?", opcoes: ["Ló", "Isaque", "Jacó"], correta: 0 },
+    { pergunta: "A fé de Abrão foi demonstrada por:", opcoes: ["Obediência", "Dúvida", "Medo"], correta: 0 },
+    { pergunta: "Ao chegar em Canaã, Abrão enfrentou:", opcoes: ["Fome", "Guerra", "Doença"], correta: 0 },
+    { pergunta: "Para onde Abrão foi durante a fome?", opcoes: ["Egito", "Babilônia", "Assíria"], correta: 0 },
+    { pergunta: "Deus prometeu que Abrão seria:", opcoes: ["Uma bênção", "Um juiz", "Um guerreiro"], correta: 0 },
+    { pergunta: "Abrão edificava altares para:", opcoes: ["Adorar ao Senhor", "Descansar", "Comer"], correta: 0 },
+    { pergunta: "O nome Abraão significa:", opcoes: ["Pai de muitas nações", "Servo fiel", "Homem justo"], correta: 0 }
   ],
 
   anagrama: [
-    { embaralhado: "ROABAA",       resposta: "ABRAAO" },
-    { embaralhado: "EF",           resposta: "FE" },
-    { embaralhado: "SUEOD",        resposta: "DEUS" },
-    { embaralhado: "AOCLMACHA",    resposta: "CHAMADO" },
-    { embaralhado: "NAACAA",       resposta: "CANAAN" },
-    { embaralhado: "IOTBEA",       resposta: "OBEITA" },
-    { embaralhado: "RAPMOSEAS",    resposta: "PROMESSA" },
-    { embaralhado: "OL",           resposta: "LO" },
-    { embaralhado: "TARAL",        resposta: "ALTAR" },
-    { embaralhado: "FOMEA",        resposta: "FOME" },
-    { embaralhado: "TOEGI",        resposta: "EGITO" },
-    { embaralhado: "ERAF",         resposta: "FEAR" }
+    { embaralhado: "ROABAA", resposta: "ABRAAO" },
+    { embaralhado: "EF", resposta: "FE" },
+    { embaralhado: "SUEOD", resposta: "DEUS" },
+    { embaralhado: "AOCLMACHA", resposta: "CHAMADO" },
+    { embaralhado: "NAACAA", resposta: "CANAAN" },
+    { embaralhado: "IOCTNIBEDAE", resposta: "OBEDIENCIA" },
+    { embaralhado: "RAPMOSEAS", resposta: "PROMESSA" },
+    { embaralhado: "OL", resposta: "LO" },
+    { embaralhado: "LARAT", resposta: "ALTAR" },
+    { embaralhado: "MFOE", resposta: "FOME" },
+    { embaralhado: "TOEGI", resposta: "EGITO" }
   ],
 
   vf: [
-    { pergunta: "Abrão foi chamado por Deus",             correta: true  },
-    { pergunta: "Abrão sabia exatamente para onde ia",    correta: false },
-    { pergunta: "O chamado exigia fé",                    correta: true  },
+    { pergunta: "Abrão foi chamado por Deus", correta: true },
+    { pergunta: "Abrão sabia exatamente para onde ia", correta: false },
+    { pergunta: "O chamado exigia fé", correta: true },
     { pergunta: "Abrão desobedeceu ao sair da sua terra", correta: false },
-    { pergunta: "Ló acompanhou Abrão",                    correta: true  },
-    { pergunta: "Abrão nunca enfrentou dificuldades",     correta: false },
-    { pergunta: "Houve fome em Canaã",                    correta: true  },
-    { pergunta: "Abrão foi para o Egito por causa da fome", correta: true  },
-    { pergunta: "Abrão sempre falou a verdade",           correta: false },
-    { pergunta: "Deus protegeu Sarai",                    correta: true  },
-    { pergunta: "A fé de Abrão gerou obediência",         correta: true  },
-    { pergunta: "Deus abandonou Abrão em suas falhas",    correta: false },
-    { pergunta: "O chamado de Deus exige perseverança",   correta: true  },
-    { pergunta: "A jornada de fé não tem desafios",       correta: false }
+    { pergunta: "Ló acompanhou Abrão", correta: true },
+    { pergunta: "Abrão nunca enfrentou dificuldades", correta: false },
+    { pergunta: "Houve fome em Canaã", correta: true },
+    { pergunta: "Abrão foi para o Egito por causa da fome", correta: true },
+    { pergunta: "Abrão sempre falou a verdade", correta: false },
+    { pergunta: "Deus protegeu Sarai", correta: true },
+    { pergunta: "A fé de Abrão gerou obediência", correta: true },
+    { pergunta: "Deus abandonou Abrão em suas falhas", correta: false },
+    { pergunta: "O chamado de Deus exige perseverança", correta: true },
+    { pergunta: "A jornada de fé não tem desafios", correta: false }
   ],
 
   forca: [
-    { dica: "Patriarca chamado por Deus",                resposta: "ABRAAO" },
-    { dica: "Quem chamou Abrão",                         resposta: "DEUS" },
-    { dica: "Base da jornada de Abrão",                  resposta: "FE" },
-    { dica: "O que Deus fez a Abrão",                    resposta: "CHAMADO" },
-    { dica: "Terra prometida",                           resposta: "CANAAN" },
-    { dica: "O que Abrão construiu",                     resposta: "ALTAR" },
-    { dica: "Parente que o acompanhou",                  resposta: "LO" },
-    { dica: "Dificuldade em Canaã",                      resposta: "FOME" },
-    { dica: "País para onde Abrão desceu",               resposta: "EGITO" },
-    { dica: "O que Deus fez a Abrão",                    resposta: "PROMESSA" },
-    { dica: "Atitude de Abrão diante de Deus",           resposta: "OBEDIENCIA" },
+    { dica: "Patriarca chamado por Deus", resposta: "ABRAAO" },
+    { dica: "Quem chamou Abrão", resposta: "DEUS" },
+    { dica: "Base da jornada de Abrão", resposta: "FE" },
+    { dica: "O que Deus fez a Abrão", resposta: "CHAMADO" },
+    { dica: "Terra prometida", resposta: "CANAAN" },
+    { dica: "O que Abrão construiu", resposta: "ALTAR" },
+    { dica: "Parente que o acompanhou", resposta: "LO" },
+    { dica: "Dificuldade em Canaã", resposta: "FOME" },
+    { dica: "País para onde Abrão desceu", resposta: "EGITO" },
+    { dica: "O que Deus fez a Abrão", resposta: "PROMESSA" },
+    { dica: "Atitude de Abrão diante de Deus", resposta: "OBEDIENCIA" },
   ],
 
-  soletrar: ["ABRAAO","FE","DEUS","CHAMADO","CANAAN","PROMESSA","ALTAR","OBEDIENCIA","FOME","EGITO","BENCAO","ALIANA"],
+  soletrar: ["ABRAAO", "FE", "DEUS", "CHAMADO", "CANAAN", "PROMESSA", "ALTAR", "OBEDIENCIA", "FOME", "EGITO", "BENCAO", "ALIANA"],
 
   cruzadinha: [
-    { dica: "Patriarca da lição",               resposta: "ABRAAO" },
-    { dica: "Quem chamou Abrão",                resposta: "DEUS" },
-    { dica: "Base da caminhada",                resposta: "FE" },
-    { dica: "Ordem divina recebida",            resposta: "CHAMADO" },
-    { dica: "Terra prometida",                  resposta: "CANAAN" },
-    { dica: "Parente que foi junto",            resposta: "LO" },
-    { dica: "Dificuldade enfrentada",           resposta: "FOME" },
-    { dica: "Destino temporário",               resposta: "EGITO" },
-    { dica: "O que Deus fez com Abrão",         resposta: "PROMESSA" },
-    { dica: "Resposta de Abrão",                resposta: "OBEDIENCIA" },
-    { dica: "Lugar de adoração",                resposta: "ALTAR" },
-    { dica: "Nome após mudança",                resposta: "ABRAAO" }
+    { dica: "Patriarca da lição", resposta: "ABRAAO" },
+    { dica: "Quem chamou Abrão", resposta: "DEUS" },
+    { dica: "Base da caminhada", resposta: "FE" },
+    { dica: "Ordem divina recebida", resposta: "CHAMADO" },
+    { dica: "Terra prometida", resposta: "CANAAN" },
+    { dica: "Parente que foi junto", resposta: "LO" },
+    { dica: "Dificuldade enfrentada", resposta: "FOME" },
+    { dica: "Destino temporário", resposta: "EGITO" },
+    { dica: "O que Deus fez com Abrão", resposta: "PROMESSA" },
+    { dica: "Resposta de Abrão", resposta: "OBEDIENCIA" },
+    { dica: "Lugar de adoração", resposta: "ALTAR" },
+    { dica: "Nome após mudança", resposta: "ABRAAO" }
   ],
 
   pares: [
-    { dica: "Patriarca chamado",               resposta: "ABRAAO" },
-    { dica: "Quem chamou",                     resposta: "DEUS" },
-    { dica: "Base da caminhada",               resposta: "FÉ" },
-    { dica: "Ordem divina",                    resposta: "CHAMADO" },
-    { dica: "Terra prometida",                 resposta: "CANAAN" },
-    { dica: "Parente que acompanhou",          resposta: "LÓ" },
-    { dica: "Dificuldade enfrentada",          resposta: "FOME" },
-    { dica: "Destino provisório",              resposta: "EGITO" },
-    { dica: "Resposta correta ao chamado",     resposta: "OBEDIENCIA" }
+    { dica: "Patriarca chamado", resposta: "ABRAAO" },
+    { dica: "Quem chamou", resposta: "DEUS" },
+    { dica: "Base da caminhada", resposta: "FÉ" },
+    { dica: "Ordem divina", resposta: "CHAMADO" },
+    { dica: "Terra prometida", resposta: "CANAAN" },
+    { dica: "Parente que acompanhou", resposta: "LÓ" },
+    { dica: "Dificuldade enfrentada", resposta: "FOME" },
+    { dica: "Destino provisório", resposta: "EGITO" },
+    { dica: "Resposta correta ao chamado", resposta: "OBEDIENCIA" }
   ],
 
   ordem: {
     label: "Coloque na ordem certa:",
-    itens:   ["Chamado", "Fome em Canaã", "Saída de Harã", "Ida ao Egito"],
+    itens: ["Chamado", "Fome em Canaã", "Saída de Harã", "Ida ao Egito"],
     corretos: ["Chamado", "Saída de Harã", "Fome em Canaã", "Ida ao Egito"]
   },
 
   flashcard: [
     {
       pergunta: "O que foi o chamado de Abrão?",
-      frase:    "O chamado foi a ordem de ___SLOT0___ para que Abrão deixasse sua ___SLOT1___ e fosse para uma terra que Ele ___SLOT2___.",
-      slots:    ["Deus", "terra", "mostraria"],
+      frase: "O chamado foi a ordem de ___SLOT0___ para que Abrão deixasse sua ___SLOT1___ e fosse para uma terra que Ele ___SLOT2___.",
+      slots: ["Deus", "terra", "mostraria"],
       distratores: ["homem", "família", "escolheu"]
     },
     {
       pergunta: "O que é fé segundo Hebreus 11:1?",
-      frase:    "Fé é o ___SLOT0___ das coisas que se esperam e a ___SLOT1___ das coisas que não se ___SLOT2___.",
-      slots:    ["fundamento", "prova", "veem"],
+      frase: "Fé é o ___SLOT0___ das coisas que se esperam e a ___SLOT1___ das coisas que não se ___SLOT2___.",
+      slots: ["fundamento", "prova", "veem"],
       distratores: ["medo", "dúvida", "sabem"]
     },
     {
       pergunta: "Qual foi a resposta de Abrão?",
-      frase:    "Abrão respondeu com ___SLOT0___, demonstrando total ___SLOT1___ ao ___SLOT2___.",
-      slots:    ["fé", "obediência", "chamado"],
+      frase: "Abrão respondeu com ___SLOT0___, demonstrando total ___SLOT1___ ao ___SLOT2___.",
+      slots: ["fé", "obediência", "chamado"],
       distratores: ["medo", "dúvida", "homem"]
     },
     {
       pergunta: "Qual promessa Deus fez?",
-      frase:    "Deus prometeu fazer de Abrão uma grande ___SLOT0___ e fazê-lo uma ___SLOT1___ para todas as ___SLOT2___.",
-      slots:    ["nação", "bênção", "famílias"],
+      frase: "Deus prometeu fazer de Abrão uma grande ___SLOT0___ e fazê-lo uma ___SLOT1___ para todas as ___SLOT2___.",
+      slots: ["nação", "bênção", "famílias"],
       distratores: ["cidade", "riqueza", "pessoas"]
     },
     {
       pergunta: "Qual dificuldade Abrão enfrentou?",
-      frase:    "Ao chegar em Canaã, Abrão enfrentou ___SLOT0___ e precisou ir ao ___SLOT1___.",
-      slots:    ["fome", "Egito"],
+      frase: "Ao chegar em Canaã, Abrão enfrentou ___SLOT0___ e precisou ir ao ___SLOT1___.",
+      slots: ["fome", "Egito"],
       distratores: ["guerra", "deserto", "Canaã"]
     },
     {
       pergunta: "Qual foi uma falha de Abrão?",
-      frase:    "Abrão demonstrou ___SLOT0___ ao não dizer a verdade sobre ___SLOT1___.",
-      slots:    ["medo", "Sarai"],
+      frase: "Abrão demonstrou ___SLOT0___ ao não dizer a verdade sobre ___SLOT1___.",
+      slots: ["medo", "Sarai"],
       distratores: ["fé", "Deus", "terra"]
     }
   ]
@@ -152,8 +151,7 @@ const BANCO = {
 // SEQUÊNCIA
 // =====================================================================
 const SEQUENCIA = [
-  "quiz", "anagrama", "vf", "pares",
-  "forca", "quiz_anagrama", "cruzadinha",
+  "quiz", "anagrama", "vf", "forca", "quiz_anagrama", "cruzadinha",
   "ordem", "flashcard", "memoria", "quiz", "vf", "anagrama", "forca", "pares"
 ];
 
@@ -170,67 +168,67 @@ let estado = {
 };
 
 let _quizFila = [];
-let _quizIdx  = 0;
-let _paresSel    = null;
+let _quizIdx = 0;
+let _paresSel = null;
 let _paresAcertos = 0;
-let _paresTotal   = 0;
+let _paresTotal = 0;
 let _forcaResposta = "";
-let _forcaAcertos  = new Set();
-let _forcaErros    = 0;
+let _forcaAcertos = new Set();
+let _forcaErros = 0;
 const FORCA_MAX_ERROS = 6;
 let _ordemAtual = [];
-let _ordemQ     = null;
-let _dragSrc    = null;
-let _qaRespostas     = 0;
-let _qaQuizFeito     = false;
+let _ordemQ = null;
+let _dragSrc = null;
+let _qaRespostas = 0;
+let _qaQuizFeito = false;
 let _qaAnagramaFeito = false;
-let _fcBancoOrdem    = null;
-let _fcCliqueWord    = null;
-let _fcQ          = null;
-let _fcSlots      = [];
-let _fcFlipped    = false;
-let _fcDragWord   = null;
-let _fcDragFrom   = null;
-let _memCartas       = [];
+let _fcBancoOrdem = null;
+let _fcCliqueWord = null;
+let _fcQ = null;
+let _fcSlots = [];
+let _fcFlipped = false;
+let _fcDragWord = null;
+let _fcDragFrom = null;
+let _memCartas = [];
 let _memSelecionadas = [];
-let _memAcertos      = 0;
-let _memBloqueado    = false;
+let _memAcertos = 0;
+let _memBloqueado = false;
 const _memPares = [
-  { par: 0, texto: "FÉ",    emoji: "🙏" },
+  { par: 0, texto: "FÉ", emoji: "🙏" },
   { par: 1, texto: "GRAÇA", emoji: "✨" },
-  { par: 2, texto: "CRUZ",  emoji: "✝️"  },
+  { par: 2, texto: "CRUZ", emoji: "✝️" },
   { par: 3, texto: "JESUS", emoji: "👑" },
-  { par: 4, texto: "AMOR",  emoji: "❤️"  },
-  { par: 5, texto: "DEUS",  emoji: "☁️"  }
+  { par: 4, texto: "AMOR", emoji: "❤️" },
+  { par: 5, texto: "DEUS", emoji: "☁️" }
 ];
 let _pcPalavrasGeradas = [];
-let _pcLinhas          = 0;
-let _pcColunas         = 0;
-let _pcGrade           = [];
-let _pcRespostas       = {};
-let _pcAtiva           = null;
-let _pcPalavraAtiva    = null;
+let _pcLinhas = 0;
+let _pcColunas = 0;
+let _pcGrade = [];
+let _pcRespostas = {};
+let _pcAtiva = null;
+let _pcPalavraAtiva = null;
 const _PC_BANCO = [
-  { palavra: "JESUS",    dica: "Filho de Deus"             },
-  { palavra: "DEUS",     dica: "Criador de tudo"           },
-  { palavra: "FE",       dica: "Meio de salvação"          },
-  { palavra: "GRACA",    dica: "Favor imerecido"           },
-  { palavra: "PECADO",   dica: "Transgressão da Lei"       },
-  { palavra: "SALVACAO", dica: "Dom de Deus ao homem"      },
-  { palavra: "AMOR",     dica: "Sentimento divino"         },
-  { palavra: "VERDADE",  dica: "O que liberta"             },
-  { palavra: "DIABO",    dica: "o tentador"             },
-  { palavra: "CRUZ",     dica: "Instrumento de redenção"   },
-  { palavra: "SANTIFICACAO",     dica: "Processo continuo na vida do crente" },
-  { palavra: "VIDA",     dica: "Dom que Cristo oferece"    },
-  { palavra: "LUZ",      dica: "Cristo é a nossa ___"      },
-  { palavra: "PAZ",      dica: "Fruto do Espírito"         },
-  { palavra: "LEI",      dica: "Mandamentos de Deus"       },
-  { palavra: "ORACAO",   dica: "Comunicação com Deus"      },
-  { palavra: "PROFETA",  dica: "Porta-voz de Deus"         },
-  { palavra: "BATISMO",  dica: "Rito de iniciação cristã"  },
-  { palavra: "PARAISO",  dica: "Morada eterna dos salvos"  },
-  { palavra: "SANTO", dica: "Separado do mal"         }
+  { palavra: "JESUS", dica: "Filho de Deus" },
+  { palavra: "DEUS", dica: "Criador de tudo" },
+  { palavra: "FE", dica: "Meio de salvação" },
+  { palavra: "GRACA", dica: "Favor imerecido" },
+  { palavra: "PECADO", dica: "Transgressão da Lei" },
+  { palavra: "SALVACAO", dica: "Dom de Deus ao homem" },
+  { palavra: "AMOR", dica: "Sentimento divino" },
+  { palavra: "VERDADE", dica: "O que liberta" },
+  { palavra: "DIABO", dica: "o tentador" },
+  { palavra: "CRUZ", dica: "Instrumento de redenção" },
+  { palavra: "SANTIFICACAO", dica: "Processo continuo na vida do crente" },
+  { palavra: "VIDA", dica: "Dom que Cristo oferece" },
+  { palavra: "LUZ", dica: "Cristo é a nossa ___" },
+  { palavra: "PAZ", dica: "Fruto do Espírito" },
+  { palavra: "LEI", dica: "Mandamentos de Deus" },
+  { palavra: "ORACAO", dica: "Comunicação com Deus" },
+  { palavra: "PROFETA", dica: "Porta-voz de Deus" },
+  { palavra: "BATISMO", dica: "Rito de iniciação cristã" },
+  { palavra: "PARAISO", dica: "Morada eterna dos salvos" },
+  { palavra: "SANTO", dica: "Separado do mal" }
 ];
 
 // =====================================================================
@@ -272,7 +270,7 @@ function salvarRankingLocal(novo) {
     r.sort((a, b) => b.pontos - a.pontos);
 
     localStorage.setItem("rank", JSON.stringify(r.slice(0, 20)));
-  } catch (_) {}
+  } catch (_) { }
 }
 
 // ⏳ Salvar pendentes
@@ -368,11 +366,11 @@ function carregarRankingLocal() {
     if (lista) {
       lista.innerHTML = r.length
         ? r.map((p, i) =>
-            `<li class="bg-slate-700 p-3 rounded-xl flex justify-between items-center">
+          `<li class="bg-slate-700 p-3 rounded-xl flex justify-between items-center">
               <span class="font-semibold">${i + 1}. ${p.nome}</span>
               <span class="text-yellow-400 font-bold">${p.pontos} pts</span>
             </li>`
-          ).join("")
+        ).join("")
         : `<li class="text-slate-400 text-center py-4">Nenhum resultado ainda.</li>`;
     }
 
@@ -517,17 +515,17 @@ function start() {
   const nome = $("nome").value.trim();
   if (!nome) { alert("Digite seu nome!"); return; }
 
-  estado.nome       = nome;
-  estado.pontos     = 0;
-  estado.jogoAtual  = 0;
+  estado.nome = nome;
+  estado.pontos = 0;
+  estado.jogoAtual = 0;
   estado.respondido = false;
   _quizFila = [];
-  _quizIdx  = 0;
-  _qaRespostas     = 0;
-  _qaQuizFeito     = false;
+  _quizIdx = 0;
+  _qaRespostas = 0;
+  _qaQuizFeito = false;
   _qaAnagramaFeito = false;
-  _fcBancoOrdem    = null;
-  _fcCliqueWord    = null;
+  _fcBancoOrdem = null;
+  _fcCliqueWord = null;
 
   $("login").classList.add("hidden");
   $("game").classList.remove("hidden");
@@ -542,16 +540,15 @@ function carregarJogo() {
   estado.respondido = false;
   const tipo = SEQUENCIA[estado.jogoAtual];
   const mapa = {
-    quiz:              jogoQuiz,
-    anagrama:          jogoAnagrama,
-    vf:                jogoVF,
-    pares:             jogoPares,
-    forca:             jogoForca,
-    cruzadinha:        jogoCruzadinha,
-    quiz_anagrama:     jogoQuizAnagrama,
-    ordem:             jogoOrdem,
-    flashcard:         jogoFlashcard,
-    memoria:           jogoMemoria,
+    quiz: jogoQuiz,
+    anagrama: jogoAnagrama,
+    vf: jogoVF,
+    forca: jogoForca,
+    cruzadinha: jogoCruzadinha,
+    quiz_anagrama: jogoQuizAnagrama,
+    ordem: jogoOrdem,
+    flashcard: jogoFlashcard,
+    memoria: jogoMemoria,
   };
   const fn = mapa[tipo];
   if (fn) fn(); else proximoJogo();
@@ -609,19 +606,19 @@ function feedback(ok) {
 function jogoQuiz() {
   if (_quizFila.length === 0 || _quizIdx >= _quizFila.length) {
     _quizFila = embaralhar(BANCO.quiz);
-    _quizIdx  = 0;
+    _quizIdx = 0;
   }
   const q = _quizFila[_quizIdx++];
-  const respostaCorreta    = q.opcoes[q.correta];
+  const respostaCorreta = q.opcoes[q.correta];
   const opcoesEmbaralhadas = embaralhar([...q.opcoes]);
-  const novoIndiceCorreto  = opcoesEmbaralhadas.indexOf(respostaCorreta);
+  const novoIndiceCorreto = opcoesEmbaralhadas.indexOf(respostaCorreta);
 
   layout("Quiz", `
     <p class="text-center font-semibold text-base leading-snug">${q.pergunta}</p>
     <div class="quiz-grid gap-2 mt-1">
       ${opcoesEmbaralhadas.map((op, i) =>
-        `<button class="btn" id="qopt-${i}" onclick="responderQuiz(${i}, ${novoIndiceCorreto})">${op}</button>`
-      ).join("")}
+    `<button class="btn" id="qopt-${i}" onclick="responderQuiz(${i}, ${novoIndiceCorreto})">${op}</button>`
+  ).join("")}
     </div>
   `);
   iniciarTimer(60);
@@ -634,7 +631,7 @@ function responderQuiz(i, correta) {
     if (!b) continue;
     b.disabled = true;
     if (k === correta) b.style.background = "#22c55e";
-    else if (k === i)  b.style.background = "#ef4444";
+    else if (k === i) b.style.background = "#ef4444";
   }
   i === correta ? acertar() : errar();
 }
@@ -676,18 +673,19 @@ function responderVF(escolha, correta) {
   escolha === correta ? acertar() : errar();
 }
 
+/*
 // =====================================================================
 // JOGO: PARES
 // =====================================================================
 function jogoPares() {
   const amostra = embaralhar(BANCO.pares).slice(0, 4);
-  _paresSel     = null;
+  _paresSel = null;
   _paresAcertos = 0;
-  _paresTotal   = amostra.length;
+  _paresTotal = amostra.length;
 
-  const dicas     = amostra.map((p, i) => ({ texto: p.dica,     idx: i, tipo: "dica" }));
+  const dicas = amostra.map((p, i) => ({ texto: p.dica, idx: i, tipo: "dica" }));
   const respostas = amostra.map((p, i) => ({ texto: p.resposta, idx: i, tipo: "resp" }));
-  const todos     = embaralhar([...dicas, ...respostas]);
+  const todos = embaralhar([...dicas, ...respostas]);
 
   const cards = todos.map((item, pos) =>
     `<div class="parItem" id="par-${pos}"
@@ -731,9 +729,9 @@ function selecionarPar(pos) {
   if (tiposDif && mesmoPar) {
     [el, prev].forEach(c => {
       c.style.background = "#22c55e";
-      c.dataset.matched  = "1";
-      c.style.opacity    = "0.6";
-      c.style.cursor     = "default";
+      c.dataset.matched = "1";
+      c.style.opacity = "0.6";
+      c.style.cursor = "default";
     });
     _paresAcertos++;
     const span = $("pares-ok");
@@ -742,21 +740,21 @@ function selecionarPar(pos) {
   } else {
     [el, prev].forEach(c => { c.style.background = "#ef4444"; });
     setTimeout(() => {
-      if (!el.dataset.matched)   el.style.background   = "";
+      if (!el.dataset.matched) el.style.background = "";
       if (!prev.dataset.matched) prev.style.background = "";
     }, 600);
   }
   _paresSel = null;
 }
-
+*/
 // =====================================================================
 // JOGO: FORCA
 // =====================================================================
 function jogoForca() {
-  const q        = aleatorio(BANCO.forca);
+  const q = aleatorio(BANCO.forca);
   _forcaResposta = normalizar(q.resposta);
-  _forcaAcertos  = new Set();
-  _forcaErros    = 0;
+  _forcaAcertos = new Set();
+  _forcaErros = 0;
   _renderForca(q.dica);
   iniciarTimer(90);
 }
@@ -775,7 +773,7 @@ function _renderForca(dica) {
 
   const teclas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l => {
     const acertou = _forcaAcertos.has(l) && _forcaResposta.includes(l);
-    const errou   = _forcaAcertos.has(l) && !_forcaResposta.includes(l);
+    const errou = _forcaAcertos.has(l) && !_forcaResposta.includes(l);
     const bg = acertou ? "#22c55e" : errou ? "#ef4444" : "#475569";
     const op = errou ? "opacity:.35;" : "";
     return `<button id="key-${l}" onclick="chutar('${l}')"
@@ -812,7 +810,7 @@ function chutar(letra) {
     if (_forcaResposta.split("").every(l => _forcaAcertos.has(l))) acertar();
   } else {
     btn.style.background = "#ef4444";
-    btn.style.opacity    = "0.35";
+    btn.style.opacity = "0.35";
     _forcaErros++;
     const badge = $("forca-erros");
     if (badge) badge.textContent = _forcaErros;
@@ -840,7 +838,7 @@ function jogoCruzadinha() {
 // JOGO: ORDEM (drag & drop + touch) - VERSÃO CORRIGIDA SEM PISCADA
 // =====================================================================
 function jogoOrdem() {
-  _ordemQ     = BANCO.ordem;
+  _ordemQ = BANCO.ordem;
   _ordemAtual = embaralhar([..._ordemQ.itens]);
   _renderOrdem();
   iniciarTimer(60);
@@ -893,7 +891,7 @@ function dragDrop(e, toIdx) {
   e.stopPropagation();
   e.currentTarget.style.outline = "";
   if (!_dragSrc || _dragSrc === e.currentTarget) return;
-  
+
   const fromIdx = +_dragSrc.dataset.idx;
   [_ordemAtual[fromIdx], _ordemAtual[toIdx]] = [_ordemAtual[toIdx], _ordemAtual[fromIdx]];
   _renderOrdem();
@@ -926,21 +924,21 @@ function touchStart(e, idx) {
 function touchMove(e) {
   if (_touchSrcIdx === null) return;
   e.preventDefault();
-  
+
   const currentY = e.touches[0].clientY;
   const currentX = e.touches[0].clientX;
   const deltaY = Math.abs(currentY - _touchStartY);
   const deltaX = Math.abs(currentX - _touchStartX);
-  
+
   if (deltaY > 15 || deltaX > 15) {
     const elementUnderFinger = document.elementFromPoint(currentX, currentY);
     const targetItem = elementUnderFinger?.closest('.ordem-item');
-    
+
     if (targetItem && targetItem !== _touchTarget) {
       const targetIdx = parseInt(targetItem.dataset.idx);
       if (!isNaN(targetIdx) && targetIdx !== _touchSrcIdx) {
-        [_ordemAtual[_touchSrcIdx], _ordemAtual[targetIdx]] = 
-        [_ordemAtual[targetIdx], _ordemAtual[_touchSrcIdx]];
+        [_ordemAtual[_touchSrcIdx], _ordemAtual[targetIdx]] =
+          [_ordemAtual[targetIdx], _ordemAtual[_touchSrcIdx]];
         _touchSrcIdx = targetIdx;
         _touchTarget = targetItem;
         _renderOrdem();
@@ -982,16 +980,16 @@ function verificarOrdem() {
 function jogoQuizAnagrama() {
   if (_quizFila.length === 0 || _quizIdx >= _quizFila.length) {
     _quizFila = embaralhar(BANCO.quiz);
-    _quizIdx  = 0;
+    _quizIdx = 0;
   }
-  const q  = _quizFila[_quizIdx++];
+  const q = _quizFila[_quizIdx++];
   const an = aleatorio(BANCO.anagrama);
 
-  const qaRespostaCorreta    = q.opcoes[q.correta];
+  const qaRespostaCorreta = q.opcoes[q.correta];
   const qaOpcoesEmbaralhadas = embaralhar([...q.opcoes]);
-  const qaNovoIndiceCorreto  = qaOpcoesEmbaralhadas.indexOf(qaRespostaCorreta);
+  const qaNovoIndiceCorreto = qaOpcoesEmbaralhadas.indexOf(qaRespostaCorreta);
 
-  _qaQuizFeito     = false;
+  _qaQuizFeito = false;
   _qaAnagramaFeito = false;
 
   layout("Quiz + Anagrama", `
@@ -999,8 +997,8 @@ function jogoQuizAnagrama() {
     <p class="text-center font-semibold text-sm leading-snug">${q.pergunta}</p>
     <div class="grid gap-2 mt-1">
       ${qaOpcoesEmbaralhadas.map((op, i) =>
-        `<button class="btn" id="qopt-${i}" onclick="responderQuizAnagrama(${i}, ${qaNovoIndiceCorreto})">${op}</button>`
-      ).join("")}
+    `<button class="btn" id="qopt-${i}" onclick="responderQuizAnagrama(${i}, ${qaNovoIndiceCorreto})">${op}</button>`
+  ).join("")}
     </div>
     <hr class="border-slate-600 my-3">
     <p class="text-center text-xs text-slate-400 uppercase tracking-widest mb-1">Desembaralhe</p>
@@ -1021,7 +1019,7 @@ function responderQuizAnagrama(i, correta) {
     if (!b) continue;
     b.disabled = true;
     if (k === correta) b.style.background = "#22c55e";
-    else if (k === i)  b.style.background = "#ef4444";
+    else if (k === i) b.style.background = "#ef4444";
   }
   if (i === correta) estado.pontos += 10;
   _tentarFinalizarQA();
@@ -1058,11 +1056,11 @@ function _tentarFinalizarQA() {
 // JOGO: FLASHCARD
 // =====================================================================
 function jogoFlashcard() {
-  _fcQ          = aleatorio(BANCO.flashcard);
-  _fcSlots      = [null, null, null];
-  _fcFlipped    = false;
-  _fcDragWord   = null;
-  _fcDragFrom   = null;
+  _fcQ = aleatorio(BANCO.flashcard);
+  _fcSlots = [null, null, null];
+  _fcFlipped = false;
+  _fcDragWord = null;
+  _fcDragFrom = null;
   _fcBancoOrdem = null;
   _fcCliqueWord = null;
   _renderFlashcard();
@@ -1110,7 +1108,7 @@ function _renderFlashcard() {
   if (!_fcBancoOrdem) {
     _fcBancoOrdem = embaralhar([...q.slots, ...q.distratores]);
   }
-  const usadas      = _fcSlots.filter(Boolean);
+  const usadas = _fcSlots.filter(Boolean);
   const disponiveis = _fcBancoOrdem.filter(p => !usadas.includes(p));
 
   const bancoPalavras = disponiveis.map(palavra => `
@@ -1162,9 +1160,9 @@ function fcVirar() {
 }
 
 function fcDragStart(e, palavra, origem) { _fcDragWord = palavra; _fcDragFrom = origem; e.dataTransfer.effectAllowed = "move"; e.currentTarget.style.opacity = ".4"; }
-function fcDragEnd(e)  { e.currentTarget.style.opacity = ""; }
+function fcDragEnd(e) { e.currentTarget.style.opacity = ""; }
 function fcDragOver(e) { e.preventDefault(); e.currentTarget.style.borderColor = "#3b82f6"; }
-function fcDragLeave(e){ e.currentTarget.style.borderColor = ""; }
+function fcDragLeave(e) { e.currentTarget.style.borderColor = ""; }
 
 function fcDrop(e, slotIdx) {
   e.preventDefault(); e.stopPropagation();
@@ -1228,7 +1226,7 @@ function fcVerificar() {
 // =====================================================================
 function jogoMemoria() {
   _memAcertos = 0; _memSelecionadas = []; _memBloqueado = false;
-  const pares  = embaralhar(_memPares).slice(0, 6);
+  const pares = embaralhar(_memPares).slice(0, 6);
   const cartas = embaralhar([
     ...pares.map(p => ({ par: p.par, face: p.texto })),
     ...pares.map(p => ({ par: p.par, face: p.emoji }))
@@ -1286,9 +1284,9 @@ function _atualizarCartaUI(id) {
   const el = document.getElementById("mc-" + id);
   if (!el) return;
   const c = _memCartas[id];
-  if (c.acertada)     { el.style.background = "#166534"; el.textContent = c.face; el.style.cursor = "default"; }
-  else if (c.virada)  { el.style.background = "#1e40af"; el.textContent = c.face; }
-  else                { el.style.background = "#334155"; el.textContent = "?"; }
+  if (c.acertada) { el.style.background = "#166534"; el.textContent = c.face; el.style.cursor = "default"; }
+  else if (c.virada) { el.style.background = "#1e40af"; el.textContent = c.face; }
+  else { el.style.background = "#334155"; el.textContent = "?"; }
 }
 
 /*
@@ -1601,7 +1599,7 @@ async function finalizar() {
   $("game").classList.add("hidden");
   $("final").classList.remove("hidden");
   $("resultado").textContent = `${estado.nome} — ${estado.pontos} pontos 🎉`;
-  
+
   await salvarPontuacao(estado.nome, estado.pontos);
   await verificarPosicaoNoRanking(estado.pontos);
 }
