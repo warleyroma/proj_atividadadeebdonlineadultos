@@ -176,8 +176,7 @@ const BANCO = {
 const SEQUENCIA = [
   "quiz", "anagrama", "vf", "pares",
   "forca", "quiz_anagrama", "cruzadinha",
-  "ordem", "flashcard", "memoria", "quiz", "vf",
-  "palavras_cruzadas", "anagrama", "forca", "pares"
+  "ordem", "flashcard", "memoria", "quiz", "vf", "anagrama", "forca", "pares"
 ];
 
 // =====================================================================
@@ -575,7 +574,6 @@ function carregarJogo() {
     ordem:             jogoOrdem,
     flashcard:         jogoFlashcard,
     memoria:           jogoMemoria,
-    palavras_cruzadas: jogoPalavrasCruzadas
   };
   const fn = mapa[tipo];
   if (fn) fn(); else proximoJogo();
@@ -1315,6 +1313,7 @@ function _atualizarCartaUI(id) {
   else                { el.style.background = "#334155"; el.textContent = "?"; }
 }
 
+/*
 // =====================================================================
 // JOGO: PALAVRAS CRUZADAS
 // =====================================================================
@@ -1615,7 +1614,7 @@ function pcVerificar() {
   else if (corretas >= Math.ceil(total * 0.6))   { estado.pontos += 5; acertar(); }
   else                                            { errar(); }
 }
-
+*/
 // =====================================================================
 // FINAL
 // =====================================================================
