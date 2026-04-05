@@ -547,8 +547,7 @@ function carregarJogo() {
     cruzadinha: jogoCruzadinha,
     quiz_anagrama: jogoQuizAnagrama,
     ordem: jogoOrdem,
-    flashcard: jogoFlashcard,
-    //memoria: jogoMemoria,
+    flashcard: jogoFlashcard
   };
   const fn = mapa[tipo];
   if (fn) fn(); else proximoJogo();
@@ -1289,7 +1288,7 @@ function _atualizarCartaUI(id) {
   else { el.style.background = "#334155"; el.textContent = "?"; }
 }
 
-
+/*
 // =====================================================================
 // JOGO: PALAVRAS CRUZADAS
 // =====================================================================
