@@ -7,166 +7,144 @@ const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 
 // Inicializa o cliente Supabase
 const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
 // =====================================================================
 // BANCO DE DADOS
 // =====================================================================
 const BANCO = {
   quiz: [
-    { pergunta: "Quem morreu pelos nossos pecados?",    opcoes: ["Jesus", "Pedro", "Paulo"], correta: 0 },
-    { pergunta: "A salvação vem por:",                   opcoes: ["Fé", "Obras", "Dinheiro"], correta: 0 },
-    { pergunta: "Quem justifica o homem?",               opcoes: ["Deus", "O próprio homem", "A Lei"], correta: 0 },
-    { pergunta: "O pecado afeta:",                       opcoes: ["Todos", "Alguns", "Ninguém"], correta: 0 },
-    { pergunta: "O salário do pecado é:",                opcoes: ["Morte", "Vida", "Bênção"], correta: 0 },
-    { pergunta: "Cristo é o único:",                     opcoes: ["Salvador", "Profeta", "Rei terreno"], correta: 0 },
-    { pergunta: "A fé produz:",                          opcoes: ["Obediência", "Medo", "Dúvida"], correta: 0 },
-    { pergunta: "A graça é:",                            opcoes: ["Favor imerecido", "Recompensa", "Troca"], correta: 0 },
-    { pergunta: "Israel foi escolhido por:",             opcoes: ["Deus", "Homem", "Seus reis"], correta: 0 },
-    { pergunta: "A santificação é:",                     opcoes: ["Um processo", "Evento único", "Um ritual"], correta: 0 },
-    { pergunta: "A salvação é um:",                      opcoes: ["Dom de Deus", "Pagamento", "Esforço"], correta: 0 },
-    { pergunta: "A Bíblia é:",                           opcoes: ["Palavra de Deus", "Livro comum", "História humana"], correta: 0 },
-    { pergunta: "A santificação é:",                     opcoes: ["Condição indispensável para contemplar a face de Deus", "Uma opção secundária na vida cristã", "Apenas um símbolo sem importância"
-  ], correta: 0 }
+    { pergunta: "Quem chamou Abrão para sair da sua terra?",    opcoes: ["Deus", "Moisés", "Um anjo"], correta: 0 },
+    { pergunta: "O chamado de Abrão exigia:",                   opcoes: ["Fé e obediência", "Força física", "Riquezas"], correta: 0 },
+    { pergunta: "Abrão deveria deixar:",                        opcoes: ["Terra, parentela e casa do pai", "Apenas sua cidade", "Somente seus bens"], correta: 0 },
+    { pergunta: "Para onde Abrão iria?",                        opcoes: ["Uma terra que Deus mostraria", "Egito", "Jerusalém"], correta: 0 },
+    { pergunta: "Deus prometeu fazer de Abrão:",                opcoes: ["Uma grande nação", "Um rei", "Um sacerdote"], correta: 0 },
+    { pergunta: "Abrão partiu com qual idade?",                 opcoes: ["75 anos", "50 anos", "100 anos"], correta: 0 },
+    { pergunta: "Quem acompanhou Abrão na jornada?",            opcoes: ["Ló", "Isaque", "Jacó"], correta: 0 },
+    { pergunta: "A fé de Abrão foi demonstrada por:",           opcoes: ["Obediência", "Dúvida", "Medo"], correta: 0 },
+    { pergunta: "Ao chegar em Canaã, Abrão enfrentou:",         opcoes: ["Fome", "Guerra", "Doença"], correta: 0 },
+    { pergunta: "Para onde Abrão foi durante a fome?",          opcoes: ["Egito", "Babilônia", "Assíria"], correta: 0 },
+    { pergunta: "Deus prometeu que Abrão seria:",               opcoes: ["Uma bênção", "Um juiz", "Um guerreiro"], correta: 0 },
+    { pergunta: "Abrão edificava altares para:",                opcoes: ["Adorar ao Senhor", "Descansar", "Comer"], correta: 0 },
+    { pergunta: "O nome Abraão significa:",                     opcoes: ["Pai de muitas nações", "Servo fiel", "Homem justo"], correta: 0 }
   ],
+
   anagrama: [
-    { embaralhado: "ODAEPC",       resposta: "PECADO" },
+    { embaralhado: "ROABAA",       resposta: "ABRAAO" },
     { embaralhado: "EF",           resposta: "FE" },
-    { embaralhado: "ACARG",        resposta: "GRACA" },
-    { embaralhado: "SUJES",        resposta: "JESUS" },
-    { embaralhado: "AOCLVASA",     resposta: "SALVACAO" },
-    { embaralhado: "NTOCAIFICASA", resposta: "SANTIFICACAO" },
-    { embaralhado: "SUED",         resposta: "DEUS" },
-    { embaralhado: "CRZU",         resposta: "CRUZ" },
-    { embaralhado: "AIVD",         resposta: "VIDA" },
-    { embaralhado: "ROAM",         resposta: "AMOR" },
-    { embaralhado: "AMLA",         resposta: "ALMA" },
-    { embaralhado: "OINER",        resposta: "REINO" }
+    { embaralhado: "SUEOD",        resposta: "DEUS" },
+    { embaralhado: "AOCLMACHA",    resposta: "CHAMADO" },
+    { embaralhado: "NAACAA",       resposta: "CANAAN" },
+    { embaralhado: "IOTBEA",       resposta: "OBEITA" },
+    { embaralhado: "RAPMOSEAS",    resposta: "PROMESSA" },
+    { embaralhado: "OL",           resposta: "LO" },
+    { embaralhado: "TARAL",        resposta: "ALTAR" },
+    { embaralhado: "FOMEA",        resposta: "FOME" },
+    { embaralhado: "TOEGI",        resposta: "EGITO" },
+    { embaralhado: "ERAF",         resposta: "FEAR" }
   ],
+
   vf: [
-    { pergunta: "Fé é apenas emoção",             correta: false },
-    { pergunta: "Deus salva o homem",             correta: true  },
-    { pergunta: "A salvação depende de obras",    correta: false },
-    { pergunta: "Cristo morreu pelos pecados",    correta: true  },
-    { pergunta: "Todos os homens são pecadores",  correta: true  },
-    { pergunta: "A graça pode ser comprada",      correta: false },
-    { pergunta: "A Bíblia é inspirada por Deus",  correta: true  },
-    { pergunta: "Santificação é instantânea",     correta: false },
-    { pergunta: "Jesus é o único caminho",        correta: true  },
-    { pergunta: "O pecado não tem consequências", correta: false },
-    { pergunta: "A fé gera obediência",           correta: true  },
-    { pergunta: "Deus rejeita o arrependido",     correta: false },
-    { pergunta: "A santificação é um processo contínuo na vida do cristão.", correta: true },
-    { pergunta: "A santificação acontece apenas no momento da conversão.", correta: false }
+    { pergunta: "Abrão foi chamado por Deus",             correta: true  },
+    { pergunta: "Abrão sabia exatamente para onde ia",    correta: false },
+    { pergunta: "O chamado exigia fé",                    correta: true  },
+    { pergunta: "Abrão desobedeceu ao sair da sua terra", correta: false },
+    { pergunta: "Ló acompanhou Abrão",                    correta: true  },
+    { pergunta: "Abrão nunca enfrentou dificuldades",     correta: false },
+    { pergunta: "Houve fome em Canaã",                    correta: true  },
+    { pergunta: "Abrão foi para o Egito por causa da fome", correta: true  },
+    { pergunta: "Abrão sempre falou a verdade",           correta: false },
+    { pergunta: "Deus protegeu Sarai",                    correta: true  },
+    { pergunta: "A fé de Abrão gerou obediência",         correta: true  },
+    { pergunta: "Deus abandonou Abrão em suas falhas",    correta: false },
+    { pergunta: "O chamado de Deus exige perseverança",   correta: true  },
+    { pergunta: "A jornada de fé não tem desafios",       correta: false }
   ],
+
   forca: [
-    { dica: "Quem nos salva?",                resposta: "JESUS" },
-    { dica: "Quem justifica o pecador?",      resposta: "DEUS" },
-    { dica: "Meio de salvação",               resposta: "FE" },
-    { dica: "O que Cristo trouxe",            resposta: "SALVACAO" },
-    { dica: "O que vence o pecado",           resposta: "GRACA" },
-    { dica: "O que Cristo oferece",           resposta: "VIDA" },
-    { dica: "Instrumento da morte de Cristo", resposta: "CRUZ" },
-    { dica: "Sentimento divino",              resposta: "AMOR" },
-    { dica: "Animal que enganou eva",      resposta: "SERPENTE" },
-    { dica: "Qual fruto Deus proibiu que fosse comido no jardim do eden",      resposta: "DO BEM E DO MAL" },
-     { dica: "Separado do mal",      resposta: "SANTO" },
+    { dica: "Patriarca chamado por Deus",                resposta: "ABRAAO" },
+    { dica: "Quem chamou Abrão",                         resposta: "DEUS" },
+    { dica: "Base da jornada de Abrão",                  resposta: "FE" },
+    { dica: "O que Deus fez a Abrão",                    resposta: "CHAMADO" },
+    { dica: "Terra prometida",                           resposta: "CANAAN" },
+    { dica: "O que Abrão construiu",                     resposta: "ALTAR" },
+    { dica: "Parente que o acompanhou",                  resposta: "LO" },
+    { dica: "Dificuldade em Canaã",                      resposta: "FOME" },
+    { dica: "País para onde Abrão desceu",               resposta: "EGITO" },
+    { dica: "O que Deus fez a Abrão",                    resposta: "PROMESSA" },
+    { dica: "Atitude de Abrão diante de Deus",           resposta: "OBEDIENCIA" },
   ],
-  soletrar: ["SALVACAO","PECADO","GRACA","FE","CRUZ","DEUS","JESUS","VIDA","AMOR","ALMA","REINO","VERDADE"],
+
+  soletrar: ["ABRAAO","FE","DEUS","CHAMADO","CANAAN","PROMESSA","ALTAR","OBEDIENCIA","FOME","EGITO","BENCAO","ALIANA"],
+
   cruzadinha: [
-    { dica: "Meio de salvação",               resposta: "FE" },
-    { dica: "Filho de Deus",                  resposta: "JESUS" },
-    { dica: "Favor imerecido",                resposta: "GRACA" },
-    { dica: "Erro do homem",                  resposta: "PECADO" },
-    { dica: "Instrumento de morte de Cristo", resposta: "CRUZ" },
-    { dica: "Criador de tudo",                resposta: "DEUS" },
-    { dica: "Vida eterna",                    resposta: "SALVACAO" },
-    { dica: "Sentimento divino",              resposta: "AMOR" },
-    { dica: "Ato judicial divino",            resposta: "JUSTIFICACAO" },
-    { dica: "Caminho correto",                resposta: "VERDADE" },
-    { dica: "Transgressão contra Deus",       resposta: "PECADO" },
-    { dica: "Trazer a vida o que estava morto", resposta: "REGERENARACAO" }
+    { dica: "Patriarca da lição",               resposta: "ABRAAO" },
+    { dica: "Quem chamou Abrão",                resposta: "DEUS" },
+    { dica: "Base da caminhada",                resposta: "FE" },
+    { dica: "Ordem divina recebida",            resposta: "CHAMADO" },
+    { dica: "Terra prometida",                  resposta: "CANAAN" },
+    { dica: "Parente que foi junto",            resposta: "LO" },
+    { dica: "Dificuldade enfrentada",           resposta: "FOME" },
+    { dica: "Destino temporário",               resposta: "EGITO" },
+    { dica: "O que Deus fez com Abrão",         resposta: "PROMESSA" },
+    { dica: "Resposta de Abrão",                resposta: "OBEDIENCIA" },
+    { dica: "Lugar de adoração",                resposta: "ALTAR" },
+    { dica: "Nome após mudança",                resposta: "ABRAAO" }
   ],
+
   pares: [
-    { dica: "Meio de salvação",               resposta: "FÉ" },
-    { dica: "Filho de Deus",                  resposta: "JESUS" },
-    { dica: "Favor imerecido",                resposta: "GRAÇA" },
-    { dica: "Erro do homem",                  resposta: "PECADO" },
-    { dica: "Instrumento de morte de Cristo", resposta: "CRUZ" },
-    { dica: "Criador de tudo",                resposta: "DEUS" },
-    { dica: "Vida eterna",                    resposta: "SALVACAO" },
-    { dica: "Sentimento divino",              resposta: "AMOR" },
-    { dica: "Inimigo das nossas almas",       resposta: "DIABO" }
+    { dica: "Patriarca chamado",               resposta: "ABRAAO" },
+    { dica: "Quem chamou",                     resposta: "DEUS" },
+    { dica: "Base da caminhada",               resposta: "FÉ" },
+    { dica: "Ordem divina",                    resposta: "CHAMADO" },
+    { dica: "Terra prometida",                 resposta: "CANAAN" },
+    { dica: "Parente que acompanhou",          resposta: "LÓ" },
+    { dica: "Dificuldade enfrentada",          resposta: "FOME" },
+    { dica: "Destino provisório",              resposta: "EGITO" },
+    { dica: "Resposta correta ao chamado",     resposta: "OBEDIENCIA" }
   ],
+
   ordem: {
     label: "Coloque na ordem certa:",
-    itens:   ["Queda", "Restauração", "Criação", "Redenção"],
-    corretos: ["Criação", "Queda", "Redenção", "Restauração"]
+    itens:   ["Chamado", "Fome em Canaã", "Saída de Harã", "Ida ao Egito"],
+    corretos: ["Chamado", "Saída de Harã", "Fome em Canaã", "Ida ao Egito"]
   },
+
   flashcard: [
     {
-      pergunta: "O que é Graça?",
-      frase:    "Graça é o ___SLOT0___ de Deus dado ao ___SLOT1___ sem que ele ___SLOT2___.",
-      slots:    ["favor", "homem", "mereça"],
-      distratores: ["castigo", "anjo", "peça"]
+      pergunta: "O que foi o chamado de Abrão?",
+      frase:    "O chamado foi a ordem de ___SLOT0___ para que Abrão deixasse sua ___SLOT1___ e fosse para uma terra que Ele ___SLOT2___.",
+      slots:    ["Deus", "terra", "mostraria"],
+      distratores: ["homem", "família", "escolheu"]
     },
     {
-      pergunta: "O que é Fé?",
-      frase:    "Fé é a ___SLOT0___ das coisas que se esperam e a prova das ___SLOT1___ que não se ___SLOT2___.",
-      slots:    ["certeza", "coisas", "veem"],
-      distratores: ["dúvida", "erros", "ouvem"]
+      pergunta: "O que é fé segundo Hebreus 11:1?",
+      frase:    "Fé é o ___SLOT0___ das coisas que se esperam e a ___SLOT1___ das coisas que não se ___SLOT2___.",
+      slots:    ["fundamento", "prova", "veem"],
+      distratores: ["medo", "dúvida", "sabem"]
     },
     {
-      pergunta: "O que é Pecado?",
-      frase:    "Pecado é a ___SLOT0___ da Lei de ___SLOT1___, que ___SLOT2___ a todos.",
-      slots:    ["transgressão", "Deus", "afeta"],
-      distratores: ["obediência", "homem", "salva"]
+      pergunta: "Qual foi a resposta de Abrão?",
+      frase:    "Abrão respondeu com ___SLOT0___, demonstrando total ___SLOT1___ ao ___SLOT2___.",
+      slots:    ["fé", "obediência", "chamado"],
+      distratores: ["medo", "dúvida", "homem"]
     },
     {
-      pergunta: "O que é Salvação?",
-      frase:    "Salvação é a ___SLOT0___ do pecado por meio da ___SLOT1___ em ___SLOT2___.",
-      slots:    ["libertação", "fé", "Jesus"],
-      distratores: ["prisão", "obra", "Pedro"]
+      pergunta: "Qual promessa Deus fez?",
+      frase:    "Deus prometeu fazer de Abrão uma grande ___SLOT0___ e fazê-lo uma ___SLOT1___ para todas as ___SLOT2___.",
+      slots:    ["nação", "bênção", "famílias"],
+      distratores: ["cidade", "riqueza", "pessoas"]
     },
     {
-      pergunta: "O que é Santificação?",
-      frase:    "Santificação é o ___SLOT0___ de ser ___SLOT1___ pela ___SLOT2___ de Deus.",
-      slots:    ["processo", "santo", "graça"],
-      distratores: ["instante", "perfeito", "força"]
+      pergunta: "Qual dificuldade Abrão enfrentou?",
+      frase:    "Ao chegar em Canaã, Abrão enfrentou ___SLOT0___ e precisou ir ao ___SLOT1___.",
+      slots:    ["fome", "Egito"],
+      distratores: ["guerra", "deserto", "Canaã"]
     },
     {
-      pergunta: "O que é Arrependimento?",
-      frase:    "Arrependimento é a ___SLOT0___ de mente que leva a ___SLOT1___ o ___SLOT2___.",
-      slots:    ["mudança", "abandonar", "pecado"],
-      distratores: ["firmeza", "amar", "mundo"]
-    },
-    {
-  pergunta: "O que ensina Gênesis 1:27?",
-  frase: "Deus criou o homem à sua ___SLOT0___, conforme a sua ___SLOT1___.",
-  slots: ["imagem", "semelhança"],
-  distratores: ["forma", "natureza", "aparência"],
-  referencia: "Gênesis 1:27"
-},
-  {
-  pergunta: "O que ensina Romanos 3:23?",
-  frase: "Pois todos ___SLOT0___ e carecem da ___SLOT1___ de Deus.",
-  slots: ["pecaram", "glória"],
-  distratores: ["viveram", "presença", "força"],
-  referencia: "Romanos 3:23"
-},
-    {
-  pergunta: "O que ensina Gálatas 4:4?",
-  frase: "Vindo a plenitude do tempo, Deus enviou seu ___SLOT0___, nascido de ___SLOT1___.",
-  slots: ["Filho", "mulher"],
-  distratores: ["servo", "homem", "terra"],
-  referencia: "Gálatas 4:4"
-},
-    {
-  pergunta: "O que ensina Colossenses 1:13-14?",
-  frase: "Ele nos tirou do poder das ___SLOT0___ e nos transportou para o reino do seu ___SLOT1___ amado.",
-  slots: ["trevas", "Filho"],
-  distratores: ["sombras", "Senhor", "espírito"],
-  referencia: "Colossenses 1:13-14"
-}
+      pergunta: "Qual foi uma falha de Abrão?",
+      frase:    "Abrão demonstrou ___SLOT0___ ao não dizer a verdade sobre ___SLOT1___.",
+      slots:    ["medo", "Sarai"],
+      distratores: ["fé", "Deus", "terra"]
+    }
   ]
 };
 
