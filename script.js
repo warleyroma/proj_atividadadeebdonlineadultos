@@ -548,7 +548,7 @@ function carregarJogo() {
     quiz_anagrama: jogoQuizAnagrama,
     ordem: jogoOrdem,
     flashcard: jogoFlashcard,
-    memoria: jogoMemoria,
+    //memoria: jogoMemoria,
   };
   const fn = mapa[tipo];
   if (fn) fn(); else proximoJogo();
